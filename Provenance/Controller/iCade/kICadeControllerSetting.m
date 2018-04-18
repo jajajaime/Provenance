@@ -10,6 +10,7 @@
 #import "PViCade8BitdoController.h"
 #import "PViCadeSteelSeriesController.h"
 #import "PViCadeMocuteController.h"
+#import "PViCadeGameSirG3sController.h"
 
 NSString* iCadeControllerSettingToString(iCadeControllerSetting value) {
     NSString* stringRepresentation = nil;
@@ -32,6 +33,9 @@ NSString* iCadeControllerSettingToString(iCadeControllerSetting value) {
 		case iCadeControllerSettingMocute:
 			stringRepresentation = @"Mocute Controller";
 			break;
+        case iCadeControllerSettingGameSirG3s:
+            stringRepresentation = @"GameSir G3s Controller";
+            break;
 		default:
             break;
     }
@@ -60,6 +64,9 @@ PViCadeController* iCadeControllerSettingToPViCadeController(iCadeControllerSett
 		case iCadeControllerSettingMocute:
 			controller = [[PViCadeMocuteController alloc] init];
 			break;
+        case iCadeControllerSettingGameSirG3s:
+            controller = [[PViCadeGameSirG3sController alloc] init];
+            break;
         default:
             break;
     }
